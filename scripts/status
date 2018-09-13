@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+kubectl set subject clusterrolebinding system:node --group=system:nodes
+kubectl get nodes
+kubectl cluster-info
+kubectl get pods --all-namespaces
+kubectl exec busybox -- nslookup kubernetes
